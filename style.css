@@ -390,8 +390,6 @@ this was used by javascript :5
   display: none;
 }
 
-
-
 @media (min-width: 50em){
   .display-md-inline-flex{
     display:inline-flex;
