@@ -266,6 +266,7 @@ body {
 }
 
 .button {
+  display: inline-flex;
   border: 0;
   text-decoration: none;
   border-radius: 100vmax;
@@ -313,6 +314,19 @@ body {
 
 .nav-list{
   font-size: var(--fs-nav);
+  display: flex;
+  gap: clamp(var(--size-500), 5vw, var(--size-700));
+  font-weight: var(--fw-semi-bold);
+}
+
+.nav-list a{
+  text-decoration: none;
+  color: var(--clr-primary-400);
+}
+
+.nav-list a:hover,
+.nav-list a:focus{
+  color: var(--clr-accent-400);
 }
 
 @media(max-width: 50em){
@@ -322,6 +336,8 @@ body {
     position: fixed;
     padding: var(--size-700);
     inset: 7rem var(--size-400) auto;
+    max-width: 25rem;
+    margin-left: auto;
     background: var(--clr-neutral-100);
     border-radius: var(--size-100);
     /* box-shadow: 0 0 .75em rgb(0, 0, 0, .05), 0 0 0 1000vmax rgb(0 0 0 / .75); */
@@ -343,26 +359,15 @@ body {
     font-weight: var(--fw-bold);
   }
 
-  .nav-list a{
-    text-decoration: none;
-    color: var(--clr-primary-400);
-  }
-
-  .nav-list a:hover,
-  .nav-list a:focus{
-    color: var(--clr-accent-400);
-  }
-
   .primary-navigation[data-visible]{
     display: block;
   }
-
 
   .mobile-nav-toggle{
     display: block;
     position: fixed;
     top: var(--size-500);
-    right: var(--size-200);
+    right: var(--size-300);
     cursor: pointer;
     background: transparent;
     border: 0;
@@ -380,3 +385,16 @@ this was used by javascript :5
   display:block;
   position: fixed;
 } */
+
+.display-sm-none {
+  display: none;
+}
+
+
+
+@media (min-width: 50em){
+  .display-md-inline-flex{
+    display:inline-flex;
+  }
+}
+
