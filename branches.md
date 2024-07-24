@@ -6,3 +6,4 @@
 3. navigation-large
 4. spacing
 5. cta
+6. footer
